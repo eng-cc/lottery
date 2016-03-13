@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.box {
+  display: ;
+  position: relative;
+  overflow: hidden;
+  width: 63%;
+  margin: auto;
+  height: 49%;
+}
+.box span {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 54px;
+  line-height: 54px;
+  border-radius: 5px;
+  background-color: #18b4ed;
+  border: 1px solid #0baae4;
+  text-align: center;
+  font-size: 17px;
+  color: #fff;
+  -webkit-transition: width 0.3s ease-out;
+  -moz-transition: width 0.3s ease-out;
+  -ms-transition: width 0.3s ease-out;
+  -o-transition: width 0.3s ease-out;
+  transition: width 0.3s ease-out;
+}
+.box .to {
+  left: 0;
+  bottom: 16%;
+}
+.box .bo {
+  right: 0;
+  top: 16%;
+}
+.box .toa {
+  width: 0;
+  border: 0;
+}
+.box .boa {
+  width: 0;
+  border: 0;
+}
+.iBox {
+  display: none;
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  top: 10%;
+  text-align: center;
+}
+.iBox p {
+  text-align: left;
+  padding: 0 8%;
+  margin-bottom: 3%;
+  line-height: 20px;
+  font-size: 14px;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in;
+  -moz-transition: opacity 0.5s ease-in;
+  -ms-transition: opacity 0.5s ease-in;
+  -o-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
+}
+.iBox textarea {
+  display: block;
+  margin: auto;
+  resize: none;
+  color: #333333;
+  line-height: 20px;
+  border: 0;
+  width: 0;
+  height: 150px;
+  border-radius: 5px;
+  -webkit-transition: width 0.3s ease-in;
+  -moz-transition: width 0.3s ease-in;
+  -ms-transition: width 0.3s ease-in;
+  -o-transition: width 0.3s ease-in;
+  transition: width 0.3s ease-in;
+}
+.iBox span {
+  overflow: hidden;
+  margin-top: 10%;
+  display: inline-block;
+  width: 0;
+  height: 44px;
+  line-height: 44px;
+  border-radius: 5px;
+  background-color: #18b4ed;
+  text-align: center;
+  font-size: 17px;
+  color: #fff;
+  -webkit-transition: width 0.3s ease-in;
+  -moz-transition: width 0.3s ease-in;
+  -ms-transition: width 0.3s ease-in;
+  -o-transition: width 0.3s ease-in;
+  transition: width 0.3s ease-in;
+}
+.iBox .blText {
+  width: 80.5%;
+  padding: 2%;
+  border: 1px solid #ccc;
+}
+.iBox .blSumb {
+  width: 85%;
+  border: 1px solid #0baae4;
+}
+.iBox .result {
+  position: absolute;
+  top: 15%;
+}
+.opp {
+  opacity: 1 !important;
+}
+.hiddenBox {
+  display: none;
+}
+.show {
+  display: block;
+}
