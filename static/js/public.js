@@ -1,7 +1,7 @@
 var opts = {
-        type: 0
-    };
-    //添加class
+    type: 0
+};
+//添加class
 var addclas = function(elem, className) {
     var fullClassName = elem.className;
     fullClassName += " ";
@@ -58,6 +58,11 @@ var show = function() {
     addclas(q('.iBox p'), 'opp');
 
 };
+var verification = function() {
+    if (q('.text').value !== "") {
+        return true;
+    };
+};
 var afSubmit = function(data) {
     console.log(data);
     var json = JSON.parse(data);
@@ -76,19 +81,23 @@ var afQuery = function(data) {
         console.log(json.msg.msg);
         addclas(q('.iBox'), 'show');
         q('.result').innerText = json.msg.msg;
-        addclas(q('.result'),'opp');
-    }else{
+        addclas(q('.result'), 'opp');
+    } else {
         alert(json.msg);
         window.location.reload();
     }
 }
 var submit = function() {
-    var data = { msg: q('.iBox textarea').value };
-    var jsonData = JSON.stringify(data);
-    ajax('post', 'api/submit', afSubmit, jsonData, 'json');
-}
+    if (verification) {
+        var data = { msg: q('.iBox textarea').value };
+        var jsonData = JSON.stringify(data);
+        ajax('post', 'api/submit', afSubmit, jsonData, 'json');
+    }else{
+        alert('内容不合法');
+    };
+};
 var query = function() {
-    ajax('get', 'api/query',afQuery);
+    ajax('get', 'api/query', afQuery);
 }
 var ani = function(num) {
     hiddenBox();
@@ -96,13 +105,11 @@ var ani = function(num) {
         addclas(q('.iBox'), 'show');
         setTimeout(show, 130);
     };
-    if (num===2) {
+    if (num === 2) {
         query();
     }
     console.log(num);
     opts.type = num;
-
-
 }
 qa('.box span')[0].addEventListener('click', function() {
     ani(1);
